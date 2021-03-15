@@ -9,10 +9,20 @@
 </head>
 
 <body>
-  <div id="app">
-    <first-name-input></first-name-input>
-    <last-name-input></last-name-input>
-    <name-display></name-display>
+	<header>
+		<h1 id='nameApp'>The Name App</h1>
+		<h6 id='description'>Dumb info about your name</h6>
+	</header>
+  	<div id="app">
+		<input v-model='first' placeholder='First Name' />
+		<input v-model='last' placeholder='Last Name' />
+		<h4>Full Name:</h4>
+		<div id='name'>{{ first }} {{ last }}</div>
+		<div id='nameLength'>Your name is {{ nameLength }} letters</div>
+		<div>The first letter is {{ first[0] }}</div>
+		<div>The last letter is {{ last[last.length - 1] }}</div>
+		<button @click='randomize'>Randomize it!</button>
+		<div id='rando'>{{ randomize }}</div>
 	</div>
 	<script src="https://unpkg.com/vue@next" defer></script>
 	<script src="components.js" defer></script>

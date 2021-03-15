@@ -9,5 +9,38 @@
 
 #app {
   background-color: #d5dbe0;
+  border-radius: 5px;
+  border: 1px solid #848688;
+  margin: 100px auto;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around
 }
 
+input {
+  margin: 2px
+}
+
+#name, #nameLength {
+  height: 30px
+}
+
+header {
+  background-color: cornflowerblue;
+  height: 50px
+}
+
+header h1 {
+  display: inline;
+  color:#343a40;
+  margin-left: 20px;
+  line-height: 1.5;
+}
+
+header h6 {
+  display: inline;
+  margin-left: 20px;
+}

@@ -1,23 +1,36 @@
-const nameApp = {
+const app = Vue.createApp({
   data() {
     return {
       first: '',
-      last: ''
+      last: '',
+    }
+  },
+
+  computed: {
+    nameLength() {
+      return this.first.length + this.last.length;
+    }
+  },
+
+  methods: {
+    randomize() {
+      let name = this.first + this.last;
+      console.log(name);
+      let nameArray = name.split("")
+      console.log(nameArray);
+      let randomValue = Math.floor(Math.random() * (nameArray.length));
+      console.log(randomValue);
+      let randomName = [];
+      let randomNameValue = nameArray[randomValue];
+      randomName.push(randomNameValue);
+      console.log(randomName);
+      return randomName;
     }
   }
-}
-
-Vue.createApp(nameApp).mount('#app')
-
-nameApp.component('first-name-input', {
-  template: `<input v-model='first' placeholder='First Name' />`
+  
 })
 
-nameApp.component('last-name-input', {
-  template: `<input v-model='last' placeholder='Last Name' />`
-})
+app.mount('#app')
 
-nameApp.component('name-display', {
-  template: `<div>{{ first }}{{ last }}</div>`
-})
+
 
