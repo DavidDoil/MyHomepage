@@ -21,8 +21,8 @@
 		<div id='nameLength'>Your name is {{ nameLength }} letters</div>
 		<div>The first letter is {{ first[0] }}</div>
 		<div>The last letter is {{ last[last.length - 1] }}</div>
-		<button @click='randomize'>Randomize it!</button>
-		<div id='rando'>{{ randomize }}</div>
+		<button @click='showRandom'>Randomize it!</button>
+		<div id='rando' v-if="isClicked">{{ randomize }}</div>
 	</div>
 	<script src="https://unpkg.com/vue@next" defer></script>
 	<script src="components.js" defer></script>

@@ -3,6 +3,7 @@ const app = Vue.createApp({
     return {
       first: '',
       last: '',
+      isClicked: false
     }
   },
 
@@ -29,7 +30,9 @@ const app = Vue.createApp({
   },
 
   methods: {
-    
+    showRandom() {
+      this.isClicked = true;
+    }
   }
   
 })
