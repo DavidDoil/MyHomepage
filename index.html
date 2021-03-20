@@ -18,6 +18,8 @@
 		<input v-model='last' placeholder='Last Name' />
 		<h4>Full Name:</h4>
 		<div id='name'>{{ first }} {{ last }}</div>
+		<h4>Backwards:</h4>
+		<div id='backwards'>{{ backwardsLast }} {{ backwardsFirst }}</div>
 		<div id='nameLength'>Your name is {{ nameLength }} letters</div>
 		<div>The first letter is {{ first[0] }}</div>
 		<div>The last letter is {{ last[last.length - 1] }}</div>

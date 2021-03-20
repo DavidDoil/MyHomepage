@@ -3,6 +3,8 @@ const app = Vue.createApp({
     return {
       first: '',
       last: '',
+      lastBackwards: '',
+      firstBackwards: '',
       isClicked: false
     }
   },
@@ -26,12 +28,26 @@ const app = Vue.createApp({
       })
       let randomNameString = randomNameArray.join("")
       return randomNameString;
+    },
+
+    backwardsLast() {
+      let lastArray = this.last.split("");
+      this.lastBackwards = lastArray.reverse().join("");
+      return this.lastBackwards;
+    },
+
+    backwardsFirst() {
+      let firstArray = this.first.split("");
+      this.firstBackwards = firstArray.reverse().join("");
+      return this.firstBackwards;
     }
+
+
   },
 
   methods: {
     showRandom() {
-      this.isClicked = true;
+      this.isClicked = !this.isClicked;
     }
   }
   
